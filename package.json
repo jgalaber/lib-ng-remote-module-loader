@@ -1,0 +1,69 @@
+{
+  "name": "lib-ng-remote-module-loader",
+  "version": "0.14.0",
+  "description": "Description TODO",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgalaber/ng-remotes-loader.git"
+  },
+  "keywords": [
+    "angular",
+    "angular-library",
+    "microfrontends",
+    "ng",
+    "ng-library",
+    "remote",
+    "ng-modules",
+    "modules",
+    "webpack-module-federation",
+    "webpack5",
+    "webpack",
+    "module",
+    "federation",
+    "multiple",
+    "microfrontends",
+    "mf",
+    "microfront"
+  ],
+  "author": "@jgalaber",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jgalaber/ng-remotes-loader/issues"
+  },
+  "homepage": "https://github.com/jgalaber/ng-remotes-loader#readme",
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "dependencies": {
+    "@angular-architects/module-federation": "14.2.x",
+    "@angular/common": "14.3.0",
+    "@angular/core": "14.3.0",
+    "@angular/platform-browser": "^14.3.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.13",
+    "@angular/cli": "^14.2.13",
+    "@angular/compiler-cli": "^14.2.0",
+    "@eslint/js": "^9.3.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "git-cz": "^4.9.0",
+    "globals": "^15.3.0",
+    "husky": "^9.0.11",
+    "ng-packagr": "^14.2.0",
+    "prettier": "3.2.5",
+    "typescript": "~4.7.2",
+    "typescript-eslint": "^7.11.0"
+  }
+}
