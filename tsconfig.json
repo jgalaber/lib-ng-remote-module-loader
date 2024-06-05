@@ -17,19 +17,12 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
-      "remote-module-loader": [
-        "dist/remote-module-loader"
-      ],
-      "remote-modules": [
-        "dist/remote-modules"
-      ]
+      "remote-module-loader": ["dist/remote-module-loader"],
+      "remote-modules": ["dist/remote-modules"]
     },
     "target": "es2020",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
