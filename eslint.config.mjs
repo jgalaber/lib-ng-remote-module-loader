@@ -15,6 +15,6 @@ export default [
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   {
-    ignores: ['**/*.conf.js'],
+    ignores: ['**/*.conf.js', 'dist/*', 'node_modules/*'],
   },
 ];
