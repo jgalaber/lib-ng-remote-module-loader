@@ -4,11 +4,14 @@
   "description": "Description TODO",
   "main": "index.js",
   "scripts": {
-    "build": "npm run format && npm run lint-fix && ng build remote-module-loader",
+    "build": "npm run clean-dist && npm run format && npm run lint-fix && ng build remote-module-loader",
     "test": "echo \"TODO: test\"",
     "format": "prettier . --write",
     "lint-fix": "eslint --fix .",
     "lint": "eslint .",
+    "pre-publish": "npm run build && npm run prepare-package",
+    "prepare-package": "cp ./README.md dist/remote-module-loader && cp ./LICENSE dist/remote-module-loader",
+    "clean-dist": "rm -rf dist",
     "prepare": "husky"
   },
   "repository": {
