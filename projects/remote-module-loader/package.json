@@ -1,6 +1,6 @@
 {
   "name": "lib-ng-remote-module-loader",
-  "version": "14.0.4",
+  "version": "14.1.0",
   "peerDependencies": {
     "@angular-architects/module-federation": "^14.2.3",
     "@angular/common": "14.3.0",
