@@ -1,1 +1,1 @@
-export type RemoteEntryType = `https://${string}/remoteEntry.js?v=${string}`;
+export type RemoteEntryType = `https://${string}/remoteEntry.js`;
