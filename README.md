@@ -58,7 +58,11 @@ You can use the remote-loader component in your templates to dynamically load an
 
 ### Exposing a Remote
 
-Remote modules intended to be loaded by the remote-loader component must implement the LoadableApp interface:
+Remote modules intended to be loaded by the remote-loader component can be implemented in two ways:
+
+1. Implementing the LoadableApp Interface:
+
+The LoadableApp interface must be implemented by remote modules. The EntryComponent should be the main component that will be rendered when the module is loaded.
 
 ```typescript
 import { LoadableApp } from 'lib-ng-remote-module-loader';
@@ -89,6 +93,30 @@ import { BarComponent } from './bar/bar.component';
 export class MyRemoteModule implements LoadableApp {
   EntryComponent = MyEntryComponent;
 }
+```
+
+2. Without Implementing the LoadableApp Interface:
+
+Alternatively, remote modules can be loaded without implementing the LoadableApp interface. In this case, the module should configure the router to load an entry component at the root path ('') or redirect to a specific route (e.g., foo).
+
+```typescript
+import { NgModule, Type } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FooComponent } from './foo/foo.component';
+import { BarComponent } from './bar/bar.component';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    RouterModule.forRoot([
+      { path: '', pathMatch: 'full', redirectTo: 'foo' },
+      { path: 'foo', component: FooComponent },
+      { path: 'bar', component: BarComponent },
+    ]),
+  ],
+})
+export class MyRemoteModule {}
 ```
 
 ### Example
